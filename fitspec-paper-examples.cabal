@@ -1,0 +1,74 @@
+cabal-version: 3.0
+name: fitspec-paper-examples
+version: 0.1.0.0
+synopsis: Standalone FitSpec examples extracted from the FitSpec paper
+category: Testing
+build-type: Simple
+
+common common
+  default-language: Haskell2010
+  ghc-options: -Wall
+  build-depends:
+      base >= 4.12 && < 5
+    , fitspec >= 0.4.10
+  hs-source-dirs: app
+
+executable example-2-not-incomplete
+  import: common
+  main-is: Example2.hs
+
+executable example-3-not-equivalence
+  import: common
+  main-is: Example3.hs
+
+executable example-4-not-implication
+  import: common
+  main-is: Example4.hs
+
+executable example-5-not-minimality
+  import: common
+  main-is: Example5.hs
+
+executable example-1-sort-refined
+  import: common
+  main-is: Example1Sort.hs
+
+executable example-6-listable-bool
+  import: common
+  main-is: Example6.hs
+
+executable example-7-listable-nat
+  import: common
+  main-is: Example7.hs
+
+executable example-8-listable-list
+  import: common
+  main-is: Example8.hs
+
+executable example-9-listable-tree
+  import: common
+  main-is: Example9.hs
+
+executable example-10-not-mutants
+  import: common
+  main-is: Example10.hs
+
+executable example-11-id-mutants
+  import: common
+  main-is: Example11.hs
+
+executable example-12-add-mutants
+  import: common
+  main-is: Example12.hs
+
+executable application-boolean
+  import: common
+  main-is: Boolean.hs
+
+executable application-id
+  import: common
+  main-is: Identity.hs
+
+executable application-add
+  import: common
+  main-is: Addition.hs
