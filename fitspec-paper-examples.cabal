@@ -11,6 +11,8 @@ common common
   build-depends:
       base >= 4.12 && < 5
     , fitspec >= 0.4.10
+    , quickspec >= 2.2.2
+    , QuickCheck
   hs-source-dirs: app
 
 executable example-2-not-incomplete
@@ -72,3 +74,28 @@ executable application-id
 executable application-add
   import: common
   main-is: Addition.hs
+
+executable insert
+  import: common
+  main-is: Insert.hs
+
+executable isort
+  import: common
+  main-is: Isort.hs
+
+executable quickspec-isort
+  import: common
+  main-is: QuickSpecIsort.hs
+
+executable quickspec-properties
+  import: common
+  main-is: QuickSpecProperties.hs
+
+executable quickspec-fitspec-isort
+  import: common
+  main-is: QuickSpecToFitSpecIsort.hs
+
+executable quickspec-fitspec-insert
+  import: common
+  main-is: QuickSpecToFitSpecInsert.hs
+  
